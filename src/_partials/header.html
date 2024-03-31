@@ -1,0 +1,82 @@
+<!-- partials/header.hbs -->
+<header class="font-inter absolute inset-x-4 md:inset-x-10 top-10 z-50">
+    <div class="flex justify-between">
+        <div class="">
+            <img src="/public/logo-2.png" alt="" class="h-10 md:h-12 w-10 md:w-12" />
+        </div>
+
+        <button data-collapse-toggle="navbar-default" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg border md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+        </button>
+
+        <div id="navbar_container"
+            class="absolute md:relative max-md:inset-0 max-md:top-10 max-md:w-full md:block md:w-auto">
+            <ul id="navbar"
+                class="max-md:hidden w-full md:w-fit md:ml-auto gap-4 md:gap-6 lg:gap-8 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-primary md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                <li
+                    class="py-4 text-sm lg:text-base capitalize font-medium text-white max-md:hover:bg-white hover:text-secondary active:text-secondary">
+                    <a class="leading-base block relative overflow-hidden group w-full" href="/">
+                        <span class="link1">home</span>
+                        <span class="link2 ">home</span>
+                    </a>
+                </li>
+                <li
+                    class="py-4 text-sm lg:text-base capitalize font-medium text-white max-md:hover:bg-white hover:text-secondary active:text-secondary">
+                    <a class="leading-base block relative overflow-hidden group w-full" href="/pages/our-team/">
+                        <span class="link1">our team</span>
+                        <span class="link2 ">our team</span>
+                    </a>
+                </li>
+                <li
+                    class="py-4 text-sm lg:text-base capitalize font-medium text-white max-md:hover:bg-white hover:text-secondary active:text-secondary">
+                    <a class="leading-base block relative overflow-hidden group w-full" href="/pages/academy/">
+                        <span class="link1">academy</span>
+                        <span class="link2 ">academy</span>
+                    </a>
+                </li>
+                <li
+                    class="py-4 text-sm lg:text-base capitalize font-medium text-white max-md:hover:bg-white hover:text-secondary active:text-secondary">
+                    <a class="leading-base block relative overflow-hidden group w-full" href="/pages/facilities/">
+                        <span class="link1">facilities</span>
+                        <span class="link2 ">facilities</span>
+                    </a>
+                </li>
+                <li
+                    class="py-4 text-sm lg:text-base capitalize font-medium text-white max-md:hover:bg-white hover:text-secondary active:text-secondary">
+                    <a class="leading-base block relative overflow-hidden group w-full" href="/pages/gallery/">
+                        <span class="link1">gallery</span>
+                        <span class="link2 ">gallery</span>
+                    </a>
+                </li>
+               
+                <li
+                    class="py-4 text-sm lg:text-base capitalize font-medium text-white max-md:hover:bg-white hover:text-secondary active:text-secondary">
+                    <a class="leading-base block relative overflow-hidden group w-full" href="/pages/contact-us/">
+                        <span class="link1">contact us</span>
+                        <span class="link2 ">contact us</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</header>
+
+<script>
+    const hamburgerEl = document.querySelector("[data-collapse-toggle=navbar-default]")
+    const navbarEl = document.querySelector("ul#navbar")
+    const navbarContainer = document.querySelector("#navbar_container")
+    const currentPageLink = navbarEl.querySelector(`[href='${window.location.pathname}']`)
+    currentPageLink.parentElement.classList.remove("text-white")
+    currentPageLink.parentElement.classList.add("!text-secondary")
+    hamburgerEl.addEventListener("click", () => {
+        navbarEl.classList.toggle("max-md:hidden")
+    })
+    navbarContainer.addEventListener("mouseout", () => navbarEl.classList.add("max-md:hidden"))
+</script>

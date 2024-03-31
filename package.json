@@ -1,0 +1,29 @@
+{
+  "name": "vite5",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/three": "^0.161.2",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-handlebars": "^2.0.0",
+    "vite-plugin-static-copy": "^1.0.2"
+  },
+  "dependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "gsap": "^3.12.5",
+    "split-type": "^0.3.4",
+    "swiper": "^11.0.7",
+    "three": "^0.161.0",
+    "unsplash-js": "^7.0.19"
+  }
+}
